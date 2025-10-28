@@ -1,4 +1,4 @@
-// From the Shadows — Basic Interactivity (no glow)
+// From the Shadows — Basic Interactivity (same-tab version, no glow)
 
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll(".category-btn");
@@ -14,12 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 100 * i);
   });
 
-  // Make links open in new tabs
+  // Let links open normally in the same tab
   buttons.forEach((btn) => {
     btn.addEventListener("click", (e) => {
-      e.preventDefault();
+      // No preventDefault — normal navigation
       const url = btn.getAttribute("href");
-      window.open(url, "_blank");
+      window.location.href = url; // same-tab navigation
     });
   });
 });
