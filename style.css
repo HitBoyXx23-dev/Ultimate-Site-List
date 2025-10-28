@@ -1,4 +1,4 @@
-/* ====== From the Shadows — Elegant Theme ====== */
+/* ====== From the Shadows — Bulletin Wall Theme (category pages) ====== */
 
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;600&display=swap');
 
@@ -10,99 +10,23 @@
 
 body {
   font-family: 'Crimson Pro', serif;
-  background: radial-gradient(circle at top, #0a0015, #050011, #000);
+  background: radial-gradient(circle at top, #060010, #04000a, #000);
   color: #eae6ff;
   min-height: 100vh;
+  padding: 40px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  overflow-x: hidden;
-  animation: fadeIn 1.5s ease;
+  animation: fadeIn 1.2s ease;
 }
 
-/* ====== Header ====== */
-header {
-  text-align: center;
-  padding: 60px 20px 30px;
-}
-
-header h1 {
-  font-size: 2.4em;
-  color: #d8baff;
-  text-shadow: 0 0 10px rgba(160, 90, 255, 0.8);
-  letter-spacing: 1px;
-  animation: glowPulse 3s infinite alternate;
-}
-
-header p {
-  color: #a7a3c9;
-  margin-top: 10px;
-  font-size: 1.1em;
-}
-
-/* ====== Category Grid ====== */
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 25px;
-  padding: 20px;
-  max-width: 1000px;
-  width: 100%;
-}
-
-.category-btn {
-  display: inline-block;
-  background: linear-gradient(145deg, rgba(40, 0, 90, 0.9), rgba(10, 0, 30, 0.8));
-  border: 1px solid rgba(160, 100, 255, 0.3);
-  color: #e5dcff;
-  text-decoration: none;
-  font-size: 1.1em;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 0 12px rgba(120, 60, 255, 0.3);
-  transition: all 0.4s ease;
-  backdrop-filter: blur(5px);
-}
-
-.category-btn:hover {
-  background: linear-gradient(145deg, rgba(100, 0, 180, 0.9), rgba(20, 0, 70, 0.8));
-  box-shadow: 0 0 25px rgba(180, 100, 255, 0.8);
-  transform: translateY(-6px) scale(1.05);
-  color: #ffffff;
-}
-
-/* ====== Footer ====== */
-footer {
-  text-align: center;
-  padding: 40px 0 25px;
-  color: #7f76aa;
-  font-size: 0.95em;
-}
-
-footer strong {
-  color: #b693ff;
-}
-
-/* ====== Animations ====== */
-@keyframes glowPulse {
-  from {
-    text-shadow: 0 0 8px rgba(140, 90, 255, 0.6);
-  }
-  to {
-    text-shadow: 0 0 18px rgba(190, 130, 255, 1);
-  }
-}
-/* ====== Bulletin Board Layout — Shadow Extension ====== */
-
+/* ====== Headings ====== */
 h2 {
   font-size: 2em;
   color: #d8baff;
   text-shadow: 0 0 12px rgba(160, 90, 255, 0.8);
-  margin-top: 60px;
-  margin-bottom: 10px;
   text-align: center;
+  margin: 20px 0 10px;
 }
 
 h3 {
@@ -111,92 +35,86 @@ h3 {
   padding-left: 12px;
   margin: 35px 0 10px;
   font-size: 1.3em;
+  width: 90%;
+  max-width: 700px;
 }
 
-/* Custom <pi> tag — like shadow notes */
-pi {
-  display: block;
-  color: #a7a3c9;
-  font-size: 0.95em;
-  margin: 6px 0 14px 6px;
-  padding-left: 10px;
-  border-left: 2px solid rgba(160, 90, 255, 0.3);
-}
-
-/* === Bulletin list === */
+/* ====== Bulletin Bubble ====== */
 ul {
   list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 800px;
+  padding: 25px;
+  margin: 0 auto 25px;
   width: 90%;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-li {
-  background: linear-gradient(145deg, rgba(25, 0, 50, 0.55), rgba(10, 0, 25, 0.55));
+  max-width: 700px;
+  background: rgba(25, 0, 50, 0.45);
   border: 1px solid rgba(140, 70, 255, 0.25);
-  border-left: 5px solid #a86fff;
-  border-radius: 10px;
-  padding: 14px 18px 10px;
-  box-shadow: 0 0 20px rgba(100, 50, 200, 0.25);
-  backdrop-filter: blur(3px);
-  position: relative;
-  overflow: hidden;
-  transition: 0.3s ease;
+  border-radius: 15px;
+  box-shadow: inset 0 0 25px rgba(100, 50, 200, 0.25),
+              0 0 18px rgba(160, 90, 255, 0.25);
+  backdrop-filter: blur(5px);
 }
 
-/* Little pin for style */
+/* ====== Dot List Style ====== */
+li {
+  font-size: 1.05em;
+  color: #e5dcff;
+  line-height: 1.7em;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  transition: 0.2s ease;
+}
+
 li::before {
-  content: "📌";
+  content: "·";
   position: absolute;
-  top: -10px;
-  left: 14px;
-  font-size: 1.1em;
-  filter: drop-shadow(0 0 3px #b693ff);
+  left: 10px;
+  color: #a87fff;
+  font-size: 1.5em;
+  top: -3px;
 }
 
 li:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 25px rgba(160, 90, 255, 0.5);
-}
-
-/* === Links === */
-li a {
-  display: block;
-  color: #e5dcff;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 1.05em;
-  margin-bottom: 5px;
-  transition: 0.3s;
-}
-
-li a:hover {
   color: #fff;
-  text-shadow: 0 0 12px #c89fff;
+  text-shadow: 0 0 8px #c89fff;
+  transform: translateX(4px);
 }
 
-/* === Footer stays consistent === */
+/* ====== <pi> Descriptions ====== */
+pi {
+  display: block;
+  font-size: 0.9em;
+  color: #a7a3c9;
+  margin: -2px 0 12px 25px;
+  border-left: 2px solid rgba(150, 90, 255, 0.3);
+  padding-left: 10px;
+}
+
+/* ====== Back / Footer ====== */
+pi a {
+  color: #a87fff;
+  text-decoration: none;
+}
+pi a:hover {
+  text-shadow: 0 0 6px #b693ff;
+}
+
 p {
   color: #7f76aa;
   text-align: center;
-  margin: 70px 0 30px;
+  margin-top: 40px;
   font-size: 0.95em;
-  letter-spacing: 0.4px;
 }
 
-/* === Mobile tweaks === */
-@media (max-width: 600px) {
-  h2 { font-size: 1.6em; }
-  li { font-size: 0.9em; padding: 12px; }
-  pi { font-size: 0.9em; }
-}
-
-
+/* ====== Animations ====== */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 600px) {
+  ul { padding: 18px; }
+  li { font-size: 0.95em; }
+  h2 { font-size: 1.6em; }
 }
