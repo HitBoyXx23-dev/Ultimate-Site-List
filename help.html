@@ -21,20 +21,20 @@
     Navigate through the categories on the homepage to explore movies, anime, manga, sports, torrents, and more.
   </p>
   
-  <img src="https://ultimate-site-list.vercel.app/photos/homescreen.png"
-       alt="homescreen"
-       class="help-image"
-       onclick="openImagePopup(this.src)">
+  <!-- Image 1 with working link -->
+  <a href="https://ultimate-site-list.vercel.app/photos/homescreen.png" target="_blank" rel="noopener">
+    <img src="https://ultimate-site-list.vercel.app/photos/homescreen.png" alt="homescreen" class="help-image">
+  </a>
 
   <h2>🖼 Adding Photos</h2>
   <p>
     How to use vidsrc go to either IMDb or TMDB IMDb codes start with tt example:tt30274401 IMDB are jst numbers example:1228246
   </p>
     
-  <img src="https://ultimate-site-list.vercel.app/photos/vidsrc.png"
-       alt="vidsrc"
-       class="help-image"
-       onclick="openImagePopup(this.src)">
+  <!-- Image 2 with working link -->
+  <a href="https://ultimate-site-list.vercel.app/photos/vidsrc.png" target="_blank" rel="noopener">
+    <img src="https://ultimate-site-list.vercel.app/photos/vidsrc.png" alt="vidsrc" class="help-image">
+  </a>
 
   <h2>🛡 Staying Safe</h2>
   <p>
@@ -54,23 +54,6 @@
   <p>🜂 Crafted in the dark <strong>From the Shadows</strong> — 2025 🜂</p>
   <a href="https://shadow-chat-a5f1.onrender.com/" class="helpchat-btn">Help Chat</a>
 </footer>
-
-<!-- Popup Modal -->
-<div id="imgPopup" class="image-popup" onclick="closeImagePopup()">
-  <span class="close-btn">&times;</span>
-  <img id="popupImg">
-</div>
-
-<script>
-function openImagePopup(src) {
-  document.getElementById("imgPopup").style.display = "flex";
-  document.getElementById("popupImg").src = src;
-}
-
-function closeImagePopup() {
-  document.getElementById("imgPopup").style.display = "none";
-}
-</script>
 
 </body>
 </html>
