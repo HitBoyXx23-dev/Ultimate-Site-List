@@ -1,8 +1,14 @@
 .help-image {
-  width: 300px;
-  max-width: 100%;
+  width: 60%;
+  max-width: 400px;
   height: auto;
   display: block;
   margin: 15px auto;
-  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .help-image {
+    width: 90%;
+    max-width: 300px;
+  }
 }
